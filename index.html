@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Saira', sans-serif;
+            background: linear-gradient(180deg, #16355a 0%, #7b91ab 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            justify-items: center;
+        }
+
+        .card-container {
+            perspective: 1000px;
+            width: 350px;
+            height: 450px;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease-in-out;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .card-front {
+            background: linear-gradient(145deg, #d9d9d9, #f0f0f0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .card-back {
+            background: linear-gradient(145deg, #2c3e50, #34495e);
+            color: white;
+            transform: rotateY(180deg);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow-y: auto;
+            max-height: 100%;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .school-logo {
+            width: 70px;
+            height: auto;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }       
+
+        .card-front h2 {
+            font-size: 1.9rem;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .card-back h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #d6970c;
+            border-bottom: 2px solid #163459;
+            padding-bottom: 10px;
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+        }
+
+        .info-section h4 {
+            color: #d6970c;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .info-section p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #bdc3c7;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: rgba(52, 152, 219, 0.2);
+            color: #d6970c;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid #163459;
+        }
+
+        .contact-info {
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meet The 2025 Interns!</h1>
+        
+        <div class="team-grid">
+
+            <!-- ARMAN -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="profile-image">
+                            <img src="arman.jpg" alt="Arman">
+                        </div>
+                        
+                        <h2>Arman Macchiavello</h2>
+                        
+                        <div class="card-footer">
+                            <div class="card-text">
+                                <h3> Business Analytics + Information Systems </h3>
+                                <p><em>University of Maryland</em></p>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/University_of_Maryland_seal.svg/640px-University_of_Maryland_seal.svg.png" alt="University Logo" class="school-logo">
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <h3>About Arman</h3>
+                        
+                        <div class="info-section">
+                            <h4>Experience</h4>
+                            <p>
+                                Arman joins ZolonTech ready to apply his strong foundation in business analytics and information systems to create meaningful impact. 
+                                As a rising sophomore at the University of Maryland’s Robert H. Smith School of Business, Arman combines academic excellence with a passion for data-driven decision-making. 
+                                <br><br>Beyond the classroom, he is a multi-talented leader, member of the UMD Sports Analytics Club, scholar-athlete, and skilled percussionist. 
+                            </p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Skills/Hobbies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">Drumming</span>
+                                <span class="skill-tag">Basketball</span>
+                                <span class="skill-tag">Analytical</span>
+                                <span class="skill-tag">Technical</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <a href=" https://www.linkedin.com/in/arman-macchiavello/">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/28px-LinkedIn_logo_initials.png" alt="linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HARSHYA -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="profile-image">
+                            <img src="harshya.jpg" alt="Harshya">
+                        </div>
+                        
+                        <h2>Harshya Gavaravarapu </h2>
+                        
+                        <div class="card-footer">
+                            <div class="card-text">
+                                <h3>Master's in Cybersecurity Engineering</h3>
+                                <p><em>George Mason University</em></p>
+                            </div>
+                            <img src="https://logos-world.net/wp-content/uploads/2024/06/George-Mason-University-Symbol.png" alt="University Logo" class="school-logo">
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <h3>About Harshya</h3>
+                        
+                        <div class="info-section">
+                            <h4>Experience</h4>
+                            <p>
+                             Harshya Gavaravarapu is a recent graduate from George Mason University, holding both a Bachelor’s and Master’s degree in Cybersecurity Engineering. She is interested in Cybersecurity, Artificial Intelligence, and Software Engineering, and wants to apply her academic knowledge to real-world challenges to make a meaningful impact in the cybersecurity division.
+                             <br><br>In her free time, she enjoys playing soccer and basketball, doing yoga, listening to music, cooking, and baking.
+                            </p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Skills/Hobbies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">Cybersecurity</span>
+                                <span class="skill-tag">Artificial Intelligence</span>
+                                <span class="skill-tag">Basketball</span>
+                                <span class="skill-tag">Yoga</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <a href="https://www.linkedin.com/in/harshya-gavaravarapu/">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/28px-LinkedIn_logo_initials.png" alt="linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THRINATH -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="profile-image">
+                            <img src="thrinath.jpg" alt="Thrinath">
+                        </div>
+                        
+                        <h2>Thrinath Chinnapati</h2>
+                        
+                        <div class="card-footer">
+                            <div class="card-text">
+                                <h3>Business + MIS</h3>
+                                <p><em>George Mason University</em></p>
+                            </div>
+                            <img src="https://logos-world.net/wp-content/uploads/2024/06/George-Mason-University-Symbol.png" alt="University Logo" class="school-logo">
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <h3>About Thrinath</h3>
+                        
+                        <div class="info-section">
+                            <h4>Experience</h4>
+                            <p>
+                               Thrinath is a rising junior at George Mason University, majoring in Business with a concentration in Management Information Systems.
+                               He looks forward to developing his critical thinking, communication, problem solving, and technical skills at the ZolonTech Summer 2025 Internship.
+                               Thrinath brings strong business acumen, as well as strong coordination, collaboration, and organizational skills. 
+                               <br><br> Outside of work, he enjoys writing stories, watching movies, cooking, and drawing. 
+                            </p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Skills/Hobbies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">Management</span>
+                                <span class="skill-tag">Communication</span>
+                                <span class="skill-tag">Drawing</span>
+                                <span class="skill-tag">Cooking</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <a href="www.linkedin.com/in/thrinathchinnapati">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/28px-LinkedIn_logo_initials.png" alt="linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ETON -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="profile-image">
+                            <img src="eton.jpg" alt="Eton">
+                        </div>
+                        
+                        <h2>Eton Tackett</h2>
+                        
+                        <div class="card-footer">
+                            <div class="card-text">
+                                <h3>Mathematics + Statistics & <br>Data Science</h3>
+                                <p><em>University of Wisconsin - Madison</em></p>
+                            </div>
+                            <img src="https://media.badgr.com/organization/bDHGPuGDEGalyH0Z_WU0K12PZ3UjHPWNH7ydzb8wWhY=.png" alt="University Logo" class="school-logo">
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <h3>About Eton</h3>
+                        
+                        <div class="info-section">
+                            <h4>Experience</h4>
+                            <p>
+                              With a strong passion for mathematics and statistics, Eton is interested in applying his strong quantitative background and utilizing his previous research experience to solve problems and drive change at ZolonTech. 
+                              He hopes to learn more about applications of mathematics in industry.
+                            </p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Skills/Hobbies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">Mathematics</span>
+                                <span class="skill-tag">Data Science</span>
+                                <span class="skill-tag">Volleyball</span>
+                                <span class="skill-tag">French</span>
+    
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <a href="https://www.linkedin.com/in/eton-tackett-b16250324/"
+">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/28px-LinkedIn_logo_initials.png" alt="linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JASWITHA -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="profile-image">
+                            <img src="jaswitha.jpg" alt="Jaswitha Madduri">
+                        </div>
+                        
+                        <h2>Jaswitha Madduri</h2>
+                        
+                        <div class="card-footer">
+                            <div class="card-text">
+                                <h3>Systems Engineering and Design</h3>
+                                <p><em>University of Illinois <br>Urbana-Champaign</em></p>
+                            </div>
+                            <img src="https://crystalpng.com/wp-content/uploads/2025/04/uiuc-logo.png" alt="University Logo" class="school-logo">
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <h3>About Jaswitha</h3>
+                        
+                        <div class="info-section">
+                            <h4>Experience</h4>
+                            <p>
+                               Jaswitha is an undergraduate engineering student, also pursuing a minor in Data Science. 
+                               At Zolon Tech, she aims to hone her coding and AutoCAD skills with the intention of being able to apply them
+                               in the future as a Systems Engineer.
+                               <br><br> Outside of her academic and professional pursuits, Jaswitha is currently teaching herself code to bring an idea to life, and 
+                               spends quite some time investing and observing the stock market.
+                               
+                            </p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Skills/Hobbies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">HTML/CSS/JavaScript</span>
+                                <span class="skill-tag">Fusion360</span>
+                                <span class="skill-tag">MATLAB</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <a href="https://www.linkedin.com/in/jaswitha-madduri-063029244/">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/28px-LinkedIn_logo_initials.png" alt="linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YASH -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="profile-image">
+                            <img src="yash.jpg" alt="Yash">
+                        </div>
+                        
+                        <h2>Yash Seri</h2>
+                        
+                        <div class="card-footer">
+                            <div class="card-text">
+                                <h3>Electronics and Communication Engineering</h3>
+                                <p><em>IIIT Hyderabad</em></p>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/en/e/e1/International_Institute_of_Information_Technology%2C_Hyderabad_logo.png" alt="University Logo" class="school-logo">
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <h3>About Yash</h3>
+                        
+                        <div class="info-section">
+                            <h4>Experience</h4>
+                            <p>
+                               Yash is a rising senior at IIIT Hyderabad, majoring in Electronics and Communication.
+                                He enjoys working on problems that pose a challenge and require out of the box solutions, which he hopes will present themselves at this internship.
+                                At Zolon, Yash intends to learn how to navigate the corporate world to further his currently undetermined goals.
+                                <br><br>He enjoys listening to music, playing video games and watching movies in his spare time. 
+                            </p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Skills/Hobbies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">Problem Solving</span>
+                                <span class="skill-tag">Communication</span>
+                                <span class="skill-tag">Music</span>
+                                <span class="skill-tag">Video Games</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <a href="https://www.linkedin.com/in/yash-seri-5108302b8/">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/28px-LinkedIn_logo_initials.png" alt="linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HARSHITH -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="profile-image">
+                            <img src="harshith.jpg" alt="Harshith">
+                        </div>
+                        
+                        <h2>Harshith Chinthapelly</h2>
+                        
+                        <div class="card-footer">
+                            <div class="card-text">
+                                <h3>Master's in Information Technology + MIS</h3>
+                                <p><em> Indiana Wesleyan University</em></p>
+                            </div>
+                            <img src="https://careers.insidehighered.com/_/imagexr/format_webp,animated_true/_/jobseekers-frontend/image/94b94424-0879-44bc-b818-065e6edc32c2" alt="University Logo" class="school-logo">
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <h3>About Harshith</h3>
+                        
+                        <div class="info-section">
+                            <h4>Experience</h4>
+                            <p>
+                               Harshith Chinthapelly is a graduate student in Management Information Systems from Indiana Wesleyan University, with an undergraduate degree in Information Technology. He's passionate about working with streaming data and hopes to become a data engineer for a multimedia company in the future. 
+                               Currently interning at Zolon Tech, Harshith is gaining valuable exposure to how a technical firm operates, from executive-level strategy to technical execution. This experience deepens his understanding of the industry and sharpens his skills in real-world settings.
+                               <br><br> Outside of his professional interests, Harshith enjoys hiking, kayaking, and watching soccer and cricket. 
+                            </p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Skills/Hobbies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">Data Engineering</span>
+                                <span class="skill-tag">Management</span>
+                                <span class="skill-tag">Hiking</span>
+                                <span class="skill-tag">Kayaking</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <a href="www.linkedin.com/in/thrinathchinnapati">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/28px-LinkedIn_logo_initials.png" alt="linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SANKEERTH-->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="profile-image">
+                            <img src="sankeerth.jpg" alt="Sankeerth">
+                        </div>
+                        
+                        <h2>Sankeerth Rao</h2>
+                        
+                        <div class="card-footer">
+                            <div class="card-text">
+                                <h3>Master's in Data Analytics</h3>
+                                <p><em> University of North Texas</em></p>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/en/3/37/Seal_of_UNT.png" alt="University Logo" class="school-logo">
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <h3>About Sankeerth</h3>
+                        
+                        <div class="info-section">
+                            <h4>Experience</h4>
+                            <p>
+                            Sankeerth has graduated with his Master's Degree with a specialization in Data Analytics at the  University of North Texas.
+                            At Zolon Tech, he focuses on applying data-driven methodologies and technical expertise to support the development of innovative, efficient solutions for the public sector operations.
+                            <br><br>Outside of his academic and professional interests, Sankeerth enjoys traveling and listening to music during his free time.
+                            </p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Skills/Hobbies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">Data Science</span>
+                                <span class="skill-tag">Technology</span>
+                                <span class="skill-tag">Travelling</span>
+                                <span class="skill-tag">Music</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <a href="www.linkedin.com/in/sankeerth-rao-dadigala">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/28px-LinkedIn_logo_initials.png" alt="linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ZYNA -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="profile-image">
+                            <img src="zyna.jpg" alt="Zyna">
+                        </div>
+                        
+                        <h2> Zyna Merchant</h2>
+                        
+                        <div class="card-footer">
+                            <div class="card-text">
+                                <h3> Management Information Systems +<br> International Business </h3>
+                                <p><em>Penn State</em></p>
+                            </div>
+                            <img src="https://2.bp.blogspot.com/-TeZe3Nt-szQ/VoHLHGw5HZI/AAAAAAAAIy4/6vdgldThLgc/s1600/Logo%2BPenn_State.png" alt="University Logo" class="school-logo">
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <h3>About Zyna</h3>
+                        
+                        <div class="info-section">
+                            <h4>Experience</h4>
+                            <p>
+                              Zyna is a rising Junior at Penn State University, majoring in Management Information Systems with a minor in International Business. 
+                              With vast experience in customer relations and data acquisition, Zyna aims to enhance her skills during the internship at Zolon Tech. 
+                              <br>Her eye for detail and exceptional analytical skills make her a valuable addition to our team. 
+                            </p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Skills/Hobbies</h4>
+                            <div class="skills">
+                                <span class="skill-tag">Data Science</span>
+                                <span class="skill-tag">Analytical</span>
+                                <span class="skill-tag">Travelling</span>
+                                <span class="skill-tag">Dance</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <a href="https://www.linkedin.com/in/zyna-merchant-34306020a/">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/28px-LinkedIn_logo_initials.png" alt="linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    <script>
+        // Add click functionality for mobile devices
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = this.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+            });
+        });
+
+        // Add smooth entrance animation
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.card-container');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
